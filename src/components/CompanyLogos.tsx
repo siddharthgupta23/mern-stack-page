@@ -225,7 +225,7 @@ const ResponsivePage = () => {
   return (
     <section style={styles.section}>
       <div style={styles.container}>
-        <h2 style={styles.heading}>Responsive Grid</h2>
+        <h2 style={styles.heading}>Join 4,000+ companies already growing</h2>
         <div style={styles.grid}>
           {/* Example images or items */}
           <img style={styles.image} src="image 53.png" alt="Image 1" />
