@@ -300,6 +300,123 @@
   }
   
 
+// .navbar {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   background-color: $background-color;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   z-index: $z-navbar;
+
+//   &__container {
+//     @include container;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     height: $navbar-height;
+//   }
+
+//   &__logo {
+//     font-size: 24px;
+//     font-weight: bold;
+//     color: $primary-color;
+//     text-decoration: none;
+//   }
+//   &__connect-sales {
+//     background-color: blue; // Example color
+//     color: white;
+//     font-weight: bold;
+//     padding: 10px 20px;
+//     border: none;
+//     border-radius: 4px;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+
+//     &:hover {
+//       background-color: black; // Darker shade on hover
+//     }
+//   }
+
+//   &__menu {
+//     display: flex;
+//     align-items: center;
+//     gap: 32px;
+
+//     @include respond-to(mobile) {
+//       display: none;
+      
+//       &.active {
+//         display: flex;
+//         flex-direction: column;
+//         position: absolute;
+//         top: $navbar-height;
+//         left: 0;
+//         width: 100%;
+//         background-color: $background-color;
+//         padding: 20px;
+//         box-shadow: 0 2px 4px rgba(31, 218, 103, 0.1);
+//       }
+//     }
+//   }
+
+//   &__item {
+//     position: relative;
+    
+//     &:hover {
+//       .navbar__dropdown {
+//         display: block;
+//       }
+//     }
+//   }
+
+//   &__link {
+//     color: $text-color;
+//     text-decoration: none;
+//     font-size: 16px;
+//     padding: 8px 16px;
+//     @include transition-all;
+
+//     &:hover {
+//       color: $primary-color;
+//     }
+//   }
+
+//   &__dropdown {
+//     display: none;
+//     position: absolute;
+//     top: 100%;
+//     left: 0;
+//     min-width: 200px;
+//     background-color: $background-color;
+//     border: 1px solid $border-color;
+//     border-radius: 4px;
+//     box-shadow: 0 2px 8px rgba(190, 68, 68, 0.1);
+//     z-index: $z-dropdown;
+
+//     &-item {
+//       display: block;
+//       padding: 12px 16px;
+//       color: $text-color;
+//       text-decoration: none;
+//       @include transition-all;
+
+//       &:hover {
+//         background-color: rgba($primary-color, 0.1);
+//         color: $primary-color;
+//       }
+//     }
+//   }
+
+//   &__hamburger {
+//     display: none;
+//     cursor: pointer;
+    
+//     @include respond-to(mobile) {
+//       display: block;
+//     }
+//   }
+// }
 .navbar {
   position: fixed;
   top: 0;
@@ -323,18 +440,41 @@
     color: $primary-color;
     text-decoration: none;
   }
+
   &__connect-sales {
-    background-color: blue; // Example color
+    background-color: $primary-color; // Use a primary color for consistency
     color: white;
     font-weight: bold;
-    padding: 10px 20px;
+    font-size: 1rem; // Use rem for better scalability
+    padding: 0.375rem 0.75rem; // Use rem for consistent scaling
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 
     &:hover {
-      background-color: black; // Darker shade on hover
+      background-color: darken($primary-color, 10%); // Slightly darker on hover
+      transform: translateY(-2px); // Subtle elevation effect on hover
+    }
+  
+    &:active {
+      transform: translateY(0); // Reset transform on click
+    }
+  
+    // Responsive adjustments
+    @media (max-width: 768px) {
+      font-size: 0.700rem; // Adjust font size for tablets
+      padding: 0.25rem 0.5rem; // Adjust padding for tablets
+    }
+  
+    @media (max-width: 480px) {
+      font-size: 0.75rem; // Adjust font size for mobile devices
+      padding: 0.2rem 0.4rem; // Adjust padding for smaller screens
+    }
+  
+    @media (min-width: 1200px) {
+      font-size: 1.125rem; // Slightly larger font for larger screens
+      padding: 0.5rem 1rem;
     }
   }
 
@@ -345,7 +485,7 @@
 
     @include respond-to(mobile) {
       display: none;
-      
+
       &.active {
         display: flex;
         flex-direction: column;
@@ -355,65 +495,8 @@
         width: 100%;
         background-color: $background-color;
         padding: 20px;
-        box-shadow: 0 2px 4px rgba(31, 218, 103, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
-    }
-  }
-
-  &__item {
-    position: relative;
-    
-    &:hover {
-      .navbar__dropdown {
-        display: block;
-      }
-    }
-  }
-
-  &__link {
-    color: $text-color;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px 16px;
-    @include transition-all;
-
-    &:hover {
-      color: $primary-color;
-    }
-  }
-
-  &__dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 200px;
-    background-color: $background-color;
-    border: 1px solid $border-color;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(190, 68, 68, 0.1);
-    z-index: $z-dropdown;
-
-    &-item {
-      display: block;
-      padding: 12px 16px;
-      color: $text-color;
-      text-decoration: none;
-      @include transition-all;
-
-      &:hover {
-        background-color: rgba($primary-color, 0.1);
-        color: $primary-color;
-      }
-    }
-  }
-
-  &__hamburger {
-    display: none;
-    cursor: pointer;
-    
-    @include respond-to(mobile) {
-      display: block;
     }
   }
 }

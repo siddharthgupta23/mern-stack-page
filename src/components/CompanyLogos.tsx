@@ -81,9 +81,117 @@
 
 // export default CompanyLogos;
 
-import React, { CSSProperties } from "react";
+// import React, { CSSProperties } from "react";
 
-const CompanyLogos: React.FC = () => {
+// const CompanyLogos: React.FC = () => {
+//   const styles: Record<string, CSSProperties> = {
+//     section: {
+//       paddingTop: "3rem",
+//       paddingBottom: "3rem",
+//       backgroundColor: "#f9fafb",
+//     },
+//     container: {
+//       maxWidth: "1200px",
+//       margin: "0 auto",
+//       padding: "0 1rem",
+//     },
+//     heading: {
+//       textAlign: "center",
+//       fontSize: "1.25rem",
+//       fontWeight: 500,
+//       marginBottom: "2rem",
+//     },
+//     grid: {
+//       display: "grid",
+//       gridTemplateColumns: "repeat(2, 1fr)",
+//       gap: "2rem",
+//       alignItems: "center",
+//       justifyItems: "center",
+//     },
+//     gridTablet: {
+//       gridTemplateColumns: "repeat(3, 1fr)",
+//     },
+//     gridDesktop: {
+//       gridTemplateColumns: "repeat(5, 1fr)",
+//     },
+//     image: {
+//       height: "3rem",
+//       objectFit: "contain",
+//     },
+//   };
+
+//   // Dynamically adjust grid based on screen width
+//   const getGridStyle = (): CSSProperties => {
+//     if (window.innerWidth >= 1024) {
+//       return { ...styles.grid, ...styles.gridDesktop };
+//     } else if (window.innerWidth >= 768) {
+//       return { ...styles.grid, ...styles.gridTablet };
+//     }
+//     return styles.grid;
+//   };
+
+//   return (
+//     <section style={styles.section}>
+//       <div style={styles.container}>
+//         <h2 style={styles.heading}>Join 4,000+ companies already growing</h2>
+//         <div style={getGridStyle()}>
+//           <img
+//             src="image 53.png"
+//             alt="Dealers Matrix"
+//             style={styles.image}
+//           />
+//           <img
+//             src="my-react-app\public\image 54.png"
+//             alt="JSW ONE"
+//             style={styles.image}
+//           />
+//           <img
+//             src="image 61.png"
+//             alt="QUXOAI"
+//             style={styles.image}
+//           />
+//           <img
+//             src="image 60.png"
+//             alt="Lifesight"
+//             style={styles.image}
+//           />
+//           <img
+//             src="image 62.png"
+//             alt="Axis Bank"
+//             style={styles.image}
+//           />
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default CompanyLogos;
+
+import { CSSProperties } from "react";
+
+const useResponsiveGrid = () => {
+  const isMobile = window.innerWidth <= 480;
+  const isTablet = window.innerWidth > 480 && window.innerWidth <= 768;
+  const isDesktop = window.innerWidth > 768 && window.innerWidth <= 1200;
+  const isLargeDesktop = window.innerWidth > 1200;
+
+  if (isMobile) {
+    return { gridTemplateColumns: "1fr" }; // 1 column for mobile
+  } else if (isTablet) {
+    return { gridTemplateColumns: "repeat(2, 1fr)" }; // 2 columns for tablets
+  } else if (isDesktop) {
+    return { gridTemplateColumns: "repeat(3, 1fr)" }; // 3 columns for desktop
+  } else if (isLargeDesktop) {
+    return { gridTemplateColumns: "repeat(5, 1fr)" }; // 5 columns for large desktop
+  }
+
+  return {}; // Fallback styles
+};
+
+const ResponsivePage = () => {
+  const gridStyle = useResponsiveGrid();
+
   const styles: Record<string, CSSProperties> = {
     section: {
       paddingTop: "3rem",
@@ -103,16 +211,10 @@ const CompanyLogos: React.FC = () => {
     },
     grid: {
       display: "grid",
-      gridTemplateColumns: "repeat(2, 1fr)",
       gap: "2rem",
       alignItems: "center",
       justifyItems: "center",
-    },
-    gridTablet: {
-      gridTemplateColumns: "repeat(3, 1fr)",
-    },
-    gridDesktop: {
-      gridTemplateColumns: "repeat(5, 1fr)",
+      ...gridStyle, // Apply dynamic grid styles
     },
     image: {
       height: "3rem",
@@ -120,51 +222,23 @@ const CompanyLogos: React.FC = () => {
     },
   };
 
-  // Dynamically adjust grid based on screen width
-  const getGridStyle = (): CSSProperties => {
-    if (window.innerWidth >= 1024) {
-      return { ...styles.grid, ...styles.gridDesktop };
-    } else if (window.innerWidth >= 768) {
-      return { ...styles.grid, ...styles.gridTablet };
-    }
-    return styles.grid;
-  };
-
   return (
     <section style={styles.section}>
       <div style={styles.container}>
-        <h2 style={styles.heading}>Join 4,000+ companies already growing</h2>
-        <div style={getGridStyle()}>
-          <img
-            src="image 53.png"
-            alt="Dealers Matrix"
-            style={styles.image}
-          />
-          <img
-            src="my-react-app\public\image 54.png"
-            alt="JSW ONE"
-            style={styles.image}
-          />
-          <img
-            src="image 61.png"
-            alt="QUXOAI"
-            style={styles.image}
-          />
-          <img
-            src="image 60.png"
-            alt="Lifesight"
-            style={styles.image}
-          />
-          <img
-            src="image 62.png"
-            alt="Axis Bank"
-            style={styles.image}
-          />
+        <h2 style={styles.heading}>Responsive Grid</h2>
+        <div style={styles.grid}>
+          {/* Example images or items */}
+          <img style={styles.image} src="image 53.png" alt="Image 1" />
+          <img style={styles.image} src="image 54.png" alt="Image 2" />
+          <img style={styles.image} src="image 61.png" alt="Image 3" />
+          <img style={styles.image} src="image 60.png" alt="Image 4" />
+          <img style={styles.image} src="image 62.png" alt="Image 5" />
         </div>
       </div>
     </section>
   );
 };
 
-export default CompanyLogos;
+export default ResponsivePage;
+
 
