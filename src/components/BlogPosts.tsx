@@ -192,10 +192,109 @@
 
 // export default BlogPosts
 
-import type React from "react"
+// import type React from "react"
+// import Slider from "react-slick"
+// import { PrevArrow, NextArrow } from "../components/common/SlideArrows/SlideArrows"
+// import "./BlogPost.scss"
+
+// interface BlogPost {
+//   id: number
+//   title: string
+//   author: string
+//   date: string
+//   description: string
+//   image: string
+// }
+
+// const blogPosts: BlogPost[] = [
+//   {
+//     id: 1,
+//     title: "PM mental models",
+//     author: "Alec Whitten",
+//     date: "17 Jan 2022",
+//     description: "Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?",
+//     image: "Image.png",
+//   },
+//   {
+//     id: 2,
+//     title: "What is Wireframing?",
+//     author: "Alec Whitten",
+//     date: "17 Jan 2022",
+//     description: "Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?",
+//     image: "Image (1).png",
+//   },
+//   {
+//     id: 3,
+//     title: "Bill Walsh leadership lessons",
+//     author: "Alec Whitten",
+//     date: "17 Jan 2022",
+//     description: "Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?",
+//     image: "Image (2).png",
+//   },
+// ]
+
+// const BlogPosts: React.FC = () => {
+//   const settings = {
+//     dots: true,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     prevArrow: <PrevArrow />,
+//     nextArrow: <NextArrow />,
+//     responsive: [
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToScroll: 1,
+//         },
+//       },
+//       {
+//         breakpoint: 640,
+//         settings: {
+//           slidesToShow: 1,
+//           slidesToScroll: 1,
+//         },
+//       },
+//     ],
+//   }
+
+//   return (
+//     <section className="blog-posts">
+//       <div className="blog-posts__container">
+//         <h2>Blog posts for the community</h2>
+//         <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+
+//         <div className="blog-posts__slider">
+//           <Slider {...settings}>
+//             {blogPosts.map((post) => (
+//               <article key={post.id} className="blog-post">
+//                 <div className="blog-post__image">
+//                   <img src={post.image || "/placeholder.svg"} alt={post.title} />
+//                 </div>
+//                 <div className="blog-post__content">
+//                   <div className="blog-post__meta">
+//                     <span className="blog-post__author">{post.author}</span>
+//                     <span className="blog-post__date">• {post.date}</span>
+//                   </div>
+//                   <h3 className="blog-post__title">{post.title}</h3>
+//                   <p className="blog-post__description">{post.description}</p>
+//                 </div>
+//               </article>
+//             ))}
+//           </Slider>
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
+
+// export default BlogPosts
+
+import React from "react"
 import Slider from "react-slick"
 import { PrevArrow, NextArrow } from "../components/common/SlideArrows/SlideArrows"
-import "./BlogPost.scss"
 
 interface BlogPost {
   id: number
@@ -261,25 +360,38 @@ const BlogPosts: React.FC = () => {
   }
 
   return (
-    <section className="blog-posts">
-      <div className="blog-posts__container">
-        <h2>Blog posts for the community</h2>
-        <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+    <section
+      className="blog-posts"
+      style={{ padding: "2rem 1rem", marginBottom: "2rem" }} // Adjust padding/margin here if needed
+    >
+      <div className="blog-posts__container" style={{ textAlign: "center", marginBottom: "1rem" }}>
+        <h2 style={{ marginBottom: "0.5rem" }}>Blog posts for the community</h2>
+        <p style={{ marginBottom: "1rem", color: "#6B7280" }}>
+          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        </p>
 
-        <div className="blog-posts__slider">
+        <div className="blog-posts__slider" style={{ marginTop: "1rem" }}>
           <Slider {...settings}>
             {blogPosts.map((post) => (
-              <article key={post.id} className="blog-post">
+              <article key={post.id} className="blog-post" style={{ margin: "0 10px" }}>
                 <div className="blog-post__image">
-                  <img src={post.image || "/placeholder.svg"} alt={post.title} />
+                  <img
+                    src={post.image || "/placeholder.svg"}
+                    alt={post.title}
+                    style={{ width: "100%", borderRadius: "8px" }}
+                  />
                 </div>
-                <div className="blog-post__content">
-                  <div className="blog-post__meta">
+                <div className="blog-post__content" style={{ marginTop: "0.5rem" }}>
+                  <div className="blog-post__meta" style={{ fontSize: "0.875rem", color: "#6B7280" }}>
                     <span className="blog-post__author">{post.author}</span>
-                    <span className="blog-post__date">• {post.date}</span>
+                    <span className="blog-post__date"> • {post.date}</span>
                   </div>
-                  <h3 className="blog-post__title">{post.title}</h3>
-                  <p className="blog-post__description">{post.description}</p>
+                  <h3 className="blog-post__title" style={{ fontSize: "1.125rem", margin: "0.5rem 0" }}>
+                    {post.title}
+                  </h3>
+                  <p className="blog-post__description" style={{ fontSize: "0.875rem", color: "#4B5563" }}>
+                    {post.description}
+                  </p>
                 </div>
               </article>
             ))}
@@ -291,4 +403,5 @@ const BlogPosts: React.FC = () => {
 }
 
 export default BlogPosts
+
 
