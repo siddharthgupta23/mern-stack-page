@@ -102,7 +102,7 @@ const Certifications: React.FC = () => {
           <div className="certifications__logo">
          
             <img src="ISO.png"/>
-            <p>ISO9001CERTIFIED(COMINGSOON)</p>
+            <p>  ISO9001CERTIFIED(COMINGSOON)</p>
               
           </div>
         </div>

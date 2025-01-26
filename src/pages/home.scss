@@ -2285,6 +2285,222 @@
   // }
   
   
+  // .certifications {
+  //   padding: 80px 0;
+  //   text-align: center;
+  //   background-color: $background-color;
+  
+  //   &__container {
+  //     @include container;
+  //     max-width: 800px;
+  
+  //     @include respond-to(mobile) {
+  //       padding: 0 16px;
+  //     }
+  //   }
+  
+  //   &__logos {
+  //     display: flex;
+  //     justify-content: center;
+  //     gap: 48px;
+  //     margin-bottom: 48px;
+  //     flex-wrap: wrap; // Ensure logos wrap on smaller screens
+  
+  //     @include respond-to(mobile) {
+  //       gap: 16px; // Reduce gap for smaller devices
+  //     }
+  //   }
+  
+  //   &__logo {
+  //     display: flex;
+  //     flex-direction: column; // Stack logo and text vertically
+  //     align-items: center;
+  //     justify-content: center;
+  //     width: 100px;
+  //     height: auto;
+  //     color: $primary-color;
+  
+  //     svg {
+  //       width: 80px;
+  //       height: 80px;
+  
+  //       @include respond-to(mobile) {
+  //         width: 60px;
+  //         height: 60px;
+  //       }
+  //     }
+  
+  //     span { // Add responsive text styling
+  //       font-size: 16px;
+  //       margin-top: 8px;
+  //       text-align: center;
+  
+  //       @include respond-to(mobile) {
+  //         font-size: 14px;
+  //       }
+  //     }
+  //   }
+  
+  //   h2 {
+  //     font-size: 36px;
+  //     font-weight: bold;
+  //     margin-bottom: 32px;
+  
+  //     @include respond-to(mobile) {
+  //       font-size: 28px;
+  //     }
+  //   }
+  
+  //   &__stats {
+  //     display: flex;
+  //     justify-content: center;
+  //     gap: 48px;
+  //     margin-bottom: 32px;
+  
+  //     @include respond-to(mobile) {
+  //       flex-direction: column;
+  //       gap: 24px;
+  //     }
+  //   }
+  
+  //   &__companies {
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 16px;
+  //     flex-wrap: wrap; // Adjust companies to wrap on smaller screens
+  //   }
+  
+  //   &__avatars {
+  //     display: flex;
+  //     margin-right: -8px;
+  
+  //     @include respond-to(mobile) {
+  //       margin-right: 0;
+  //       justify-content: center; // Center avatars on mobile
+  //     }
+  //   }
+  
+  //   &__avatar {
+  //     width: 32px;
+  //     height: 32px;
+  //     border-radius: 50%;
+  //     border: 2px solid $background-color;
+  //     background-color: $primary-color;
+  //     margin-left: -8px;
+  
+  //     &:nth-child(2n) {
+  //       background-color: darken($primary-color, 10%);
+  //     }
+  
+  //     @include respond-to(mobile) {
+  //       width: 28px;
+  //       height: 28px;
+  //     }
+  //   }
+  
+  //   &__rating {
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 8px;
+  
+  //     @include respond-to(mobile) {
+  //       justify-content: center; // Center ratings on mobile
+  //     }
+  //   }
+  
+  //   &__stars {
+  //     color: #FFB800;
+  //   }
+  
+  //   &__star {
+  //     margin-right: 2px;
+  //   }
+  
+  //   &__cta {
+  //     padding: 12px 32px;
+  //     font-size: 18px;
+  
+  //     @include respond-to(mobile) {
+  //       padding: 8px 16px;
+  //       font-size: 16px;
+  //     }
+  //   }
+  // }
+  
+  // .image-container {
+  //   position: relative;
+  //   overflow: hidden;
+  //   background-color: rgba($secondary-color, 0.1);
+  
+  //   .image {
+  //     width: 100%;
+  //     height: auto;
+  //     object-fit: cover;
+  //     @include transition-all;
+  
+  //     &-hidden {
+  //       opacity: 0;
+  //     }
+  //   }
+  
+  //   .image-placeholder {
+  //     @include flex-center;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  
+  //   .image-spinner {
+  //     width: 40px;
+  //     height: 40px;
+  //     border: 3px solid rgba($primary-color, 0.3);
+  //     border-radius: 50%;
+  //     border-top-color: $primary-color;
+  //     animation: spin 1s linear infinite;
+  //   }
+  
+  //   .image-error {
+  //     @include flex-center;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     background-color: rgba($secondary-color, 0.1);
+  //     color: $secondary-color;
+  //     font-size: 14px;
+  //   }
+  // }
+  
+  // @keyframes spin {
+  //   to {
+  //     transform: rotate(360deg);
+  //   }
+  // }
+  
+  // .logo-image {
+  //   width: 120px;
+  //   height: 40px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  
+  //   &__svg {
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  
+  //   @include respond-to(mobile) {
+  //     width: 100px;
+  //     height: 35px;
+  //   }
+  // }
+  
+  
+
+  
   .certifications {
     padding: 80px 0;
     text-align: center;
@@ -2293,6 +2509,10 @@
     &__container {
       @include container;
       max-width: 800px;
+  
+      @include respond-to(laptop) {
+        padding: 0 32px;
+      }
   
       @include respond-to(mobile) {
         padding: 0 16px;
@@ -2304,10 +2524,18 @@
       justify-content: center;
       gap: 48px;
       margin-bottom: 48px;
-      flex-wrap: wrap; // Ensure logos wrap on smaller screens
+      flex-wrap: wrap; // Ensure wrapping on smaller screens
+  
+      @include respond-to(tablet) {
+        gap: 32px; // Adjust gap for tablets
+      }
+  
+      @include respond-to(laptop) {
+        gap: 24px; // Reduce gap for laptops
+      }
   
       @include respond-to(mobile) {
-        gap: 16px; // Reduce gap for smaller devices
+        gap: 16px; // Reduce gap for mobile devices
       }
     }
   
@@ -2316,13 +2544,23 @@
       flex-direction: column; // Stack logo and text vertically
       align-items: center;
       justify-content: center;
-      width: 100px;
+      width: 120px; // Default logo size
       height: auto;
       color: $primary-color;
   
       svg {
-        width: 80px;
-        height: 80px;
+        width: 100px; // Default logo size
+        height: 100px;
+  
+        @include respond-to(laptop) {
+          width: 80px;
+          height: 80px;
+        }
+  
+        @include respond-to(tablet) {
+          width: 70px;
+          height: 70px;
+        }
   
         @include respond-to(mobile) {
           width: 60px;
@@ -2330,175 +2568,42 @@
         }
       }
   
-      span { // Add responsive text styling
-        font-size: 16px;
+      span {
+        font-size: 16px; // Default font size
         margin-top: 8px;
         text-align: center;
   
-        @include respond-to(mobile) {
+        @include respond-to(laptop) {
           font-size: 14px;
+        }
+  
+        @include respond-to(tablet) {
+          font-size: 12px;
+        }
+  
+        @include respond-to(mobile) {
+          font-size: 12px;
         }
       }
     }
   
     h2 {
-      font-size: 36px;
+      font-size: 36px; // Default font size
       font-weight: bold;
       margin-bottom: 32px;
+  
+      @include respond-to(laptop) {
+        font-size: 32px;
+      }
+  
+      @include respond-to(tablet) {
+        font-size: 30px;
+      }
   
       @include respond-to(mobile) {
         font-size: 28px;
       }
     }
-  
-    &__stats {
-      display: flex;
-      justify-content: center;
-      gap: 48px;
-      margin-bottom: 32px;
-  
-      @include respond-to(mobile) {
-        flex-direction: column;
-        gap: 24px;
-      }
-    }
-  
-    &__companies {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap; // Adjust companies to wrap on smaller screens
-    }
-  
-    &__avatars {
-      display: flex;
-      margin-right: -8px;
-  
-      @include respond-to(mobile) {
-        margin-right: 0;
-        justify-content: center; // Center avatars on mobile
-      }
-    }
-  
-    &__avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: 2px solid $background-color;
-      background-color: $primary-color;
-      margin-left: -8px;
-  
-      &:nth-child(2n) {
-        background-color: darken($primary-color, 10%);
-      }
-  
-      @include respond-to(mobile) {
-        width: 28px;
-        height: 28px;
-      }
-    }
-  
-    &__rating {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-  
-      @include respond-to(mobile) {
-        justify-content: center; // Center ratings on mobile
-      }
-    }
-  
-    &__stars {
-      color: #FFB800;
-    }
-  
-    &__star {
-      margin-right: 2px;
-    }
-  
-    &__cta {
-      padding: 12px 32px;
-      font-size: 18px;
-  
-      @include respond-to(mobile) {
-        padding: 8px 16px;
-        font-size: 16px;
-      }
-    }
   }
-  
-  .image-container {
-    position: relative;
-    overflow: hidden;
-    background-color: rgba($secondary-color, 0.1);
-  
-    .image {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      @include transition-all;
-  
-      &-hidden {
-        opacity: 0;
-      }
-    }
-  
-    .image-placeholder {
-      @include flex-center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  
-    .image-spinner {
-      width: 40px;
-      height: 40px;
-      border: 3px solid rgba($primary-color, 0.3);
-      border-radius: 50%;
-      border-top-color: $primary-color;
-      animation: spin 1s linear infinite;
-    }
-  
-    .image-error {
-      @include flex-center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba($secondary-color, 0.1);
-      color: $secondary-color;
-      font-size: 14px;
-    }
-  }
-  
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .logo-image {
-    width: 120px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    &__svg {
-      width: 100%;
-      height: 100%;
-    }
-  
-    @include respond-to(mobile) {
-      width: 100px;
-      height: 35px;
-    }
-  }
-  
-  
-
   
   
