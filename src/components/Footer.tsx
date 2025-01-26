@@ -140,10 +140,10 @@ const Footer = () => {
             <h4 style={{ fontWeight: "600", marginBottom: "1rem" }}>Company</h4>
             <ul style={{ paddingLeft: "1.25rem", fontSize: "0.875rem", color: "#4b5563" }}>
               <li style={{ marginBottom: "0.5rem" }}>
-                <Link to="/about" style={{ color: "#1f2937", textDecoration: "none", transition: "color 0.2s" }}>About</Link>
+                <Link to="" style={{ color: "#1f2937", textDecoration: "none", transition: "color 0.2s" }}>About</Link>
               </li>
               <li style={{ marginBottom: "0.5rem" }}>
-                <Link to="/contact" style={{ color: "#1f2937", textDecoration: "none", transition: "color 0.2s" }}>Contact Us</Link>
+                <Link to="" style={{ color: "#1f2937", textDecoration: "none", transition: "color 0.2s" }}>Contact Us</Link>
               </li>
               <li style={{ marginBottom: "0.5rem" }}>
                 <Link to="/partners" style={{ color: "#1f2937", textDecoration: "none", transition: "color 0.2s" }}>For Partners</Link>
