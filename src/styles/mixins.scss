@@ -1,0 +1,93 @@
+// @mixin respond-to($breakpoint) {
+//     @if $breakpoint == mobile {
+//       @media (max-width: $mobile) { @content; }
+//     }
+//     @if $breakpoint == tablet {
+//       @media (min-width: $mobile + 1) and (max-width: $tablet) { @content; }
+//     }
+//     @if $breakpoint == desktop {
+//       @media (min-width: $tablet + 1) { @content; }
+//     }
+//   }
+  
+//   @mixin flex-center {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+  
+//   @mixin container {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     padding: 0 $container-padding;
+//   }
+  
+//   @mixin transition-all {
+//     transition: all $transition-speed $transition-ease;
+//   }
+  
+  // Mixin for responsive breakpoints
+// @mixin respond-to($breakpoint) {
+//     @if $breakpoint == mobile {
+//       @media (max-width: $mobile) { @content; }
+//     }
+//     @if $breakpoint == tablet {
+//       @media (min-width: $mobile + 1) and (max-width: $tablet) { @content; }
+//     }
+//     @if $breakpoint == desktop {
+//       @media (min-width: $tablet + 1) { @content; }
+//     }
+//   }
+  
+//   // Mixin for flexbox centering
+//   @mixin flex-center {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+  
+//   // Mixin for a responsive container with padding
+//   @mixin container {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     padding: 0 $container-padding;
+//   }
+  
+//   // Mixin for smooth transitions
+//   @mixin transition-all {
+//     transition: all $transition-speed $transition-ease;
+//   }
+  // Mixin for responsive breakpoints
+@use './variables' as *;
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == mobile {
+      @media (max-width: $mobile) { @content; }
+    }
+    @if $breakpoint == tablet {
+      @media (min-width: #{$mobile + 1}px) and (max-width: $tablet) { @content; }
+    }
+    @if $breakpoint == desktop {
+      @media (min-width: #{$tablet + 1}px) { @content; }
+    }
+  }
+  
+  // Mixin for flexbox centering
+  @mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  // Mixin for a responsive container with padding
+  @mixin container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+  }
+  
+  // Mixin for smooth transitions
+  @mixin transition-all {
+    transition: all $transition-speed $transition-ease;
+  }
+  

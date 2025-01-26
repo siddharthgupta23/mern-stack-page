@@ -1,0 +1,73 @@
+/* CompanyLogos.scss */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .bg-gray-50 {
+    background-color: #f9fafb;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+  
+  .grid {
+    display: grid;
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .md\\:grid-cols-3 {
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .lg\\:grid-cols-5 {
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  .gap-8 {
+    gap: 2rem;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-items-center {
+    justify-items: center;
+  }
+  
+  .h-12 {
+    height: 3rem;
+  }
+  
+  .object-contain {
+    object-fit: contain;
+  }
+  

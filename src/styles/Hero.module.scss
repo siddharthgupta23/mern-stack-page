@@ -1,0 +1,104 @@
+/* Hero.scss */
+
+.hero {
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #ffffff;
+  
+    .bg-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('/pattern-bg.svg');
+      opacity: 0.05;
+    }
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 9999px;
+      border: 1px solid #e5e7eb; /* border-gray-200 */
+      background-color: #ffffff;
+      padding: 0.25rem 1rem;
+      font-size: 0.875rem;
+  
+      .badge-text {
+        background-color: #fef2c0; /* bg-yellow-100 */
+        color: #b45309; /* text-yellow-800 */
+        border-radius: 9999px;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-right: 0.5rem;
+      }
+  
+      .badge-description {
+        color: #4b5563; /* text-gray-600 */
+      }
+    }
+  
+    .heading {
+      margin-bottom: 1.5rem;
+      text-align: right;
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+  
+      @media (min-width: 640px) {
+        font-size: 3rem;
+      }
+  
+      @media (min-width: 768px) {
+        font-size: 3.75rem;
+      }
+    }
+  
+    .subheading {
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      max-width: 35rem;
+      text-align: center;
+      font-size: 1.125rem;
+      color: #4b5563; /* text-gray-600 */
+    }
+  
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+  
+      .MuiButton-root {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 9999px;
+      }
+    }
+  
+    .rating {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .star {
+        color: #fbbf24; /* text-yellow-400 */
+      }
+  
+      .review-text {
+        margin-left: 0.5rem;
+        font-size: 0.875rem;
+        color: #4b5563; /* text-gray-600 */
+      }
+    }
+  }
+  

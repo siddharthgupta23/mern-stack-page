@@ -1,0 +1,32 @@
+// Colors
+$primary-color: #0066ff;
+$secondary-color: #4a5568;
+$background-color: #ffffff;
+$text-color: #2d3748;
+$border-color: #e2e8f0;
+
+// Breakpoints
+$mobile: 576px;
+$tablet: 768px;
+$desktop: 1024px;
+$large-desktop: 1280px;
+
+// Typography
+$font-family: 'Inter', sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+// Spacing
+$spacing-unit: 8px;
+$container-padding: 20px;
+$navbar-height: 80px;
+
+// Transitions
+$transition-speed: 0.3s;
+$transition-ease: ease-in-out;
+
+// Z-indices
+$z-dropdown: 100;
+$z-navbar: 1000;
+$z-modal: 2000;
+

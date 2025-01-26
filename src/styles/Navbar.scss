@@ -1,0 +1,118 @@
+/* Navbar.scss */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    padding: 1rem 2rem;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  
+    .navbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .logo {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+      }
+  
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+  
+        .menu-item {
+          font-size: 1rem;
+          color: #4b5563; /* text-gray-600 */
+          text-decoration: none;
+          &:hover {
+            color: #1f2937; /* hover:text-gray-900 */
+          }
+        }
+  
+        .button {
+          background-color: #3b82f6; /* primary color */
+          color: #ffffff;
+          padding: 0.75rem 1.5rem;
+          border-radius: 9999px;
+          font-size: 1rem;
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #2563eb; /* hover color */
+          }
+        }
+      }
+  
+      .menu-icon {
+        display: none;
+        cursor: pointer;
+  
+        .MuiSvgIcon-root {
+          font-size: 2rem;
+        }
+      }
+    }
+  
+    .mobile-menu {
+      display: none;
+      background-color: #ffffff;
+      padding: 1rem 0;
+  
+      .mobile-menu-item {
+        display: block;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        color: #4b5563; /* text-gray-600 */
+        text-decoration: none;
+        &:hover {
+          color: #1f2937; /* hover:text-gray-900 */
+        }
+      }
+  
+      .mobile-button {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        background-color: #3b82f6; /* primary color */
+        color: #ffffff;
+        border-radius: 9999px;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        text-align: center;
+  
+        &:hover {
+          background-color: #2563eb; /* hover color */
+        }
+      }
+    }
+  
+    @media (max-width: 767px) {
+      .menu {
+        display: none;
+      }
+  
+      .menu-icon {
+        display: block;
+      }
+  
+      .mobile-menu {
+        display: block;
+      }
+    }
+  }
+  

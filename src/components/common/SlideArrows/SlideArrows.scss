@@ -1,0 +1,46 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+ .slider-arrow {
+   position: absolute;
+   top:10%;
+   transform: translateY(-50%);
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: $background-color;
+   border: 1px solid $border-color;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   z-index: 2;
+   transition: all 0.3s ease;
+  
+   &:hover {
+    
+     border-color: $primary-color;
+     color: white;
+   }
+
+   &--prev {
+     left: -20px;
+   }
+
+   &--next {
+     right: -20px;
+   }
+
+  @include respond-to(mobile) {
+     width: 32px;
+     height: 32px;
+
+     &--prev {
+       left: -16px;
+     }
+
+     &--next {
+       right: -16px;
+     }
+   }
+ }
+
