@@ -345,7 +345,7 @@ const CaseStudies: React.FC = () => {
 
   const CaseStudyCard: React.FC<CaseStudy> = ({ title, description }) => (
     <div className="case-studies__card">
-      <div className="case-studies__image">
+      <div>
         <CaseStudyImage />
       </div>
       <div className="case-studies__content">
