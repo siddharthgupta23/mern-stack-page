@@ -1725,6 +1725,187 @@
 //   }
 // }
 
+// .driving-results {
+//   padding: 80px 0;
+//   background-color: $background-color;
+//   overflow: hidden;
+
+//   &__container {
+//     @include container;
+//     max-width: 1000px;
+//     position: relative;
+//   }
+
+//   h2 {
+//     text-align: center;
+//     font-size: 36px;
+//     font-weight: bold;
+//     margin-bottom: 48px;
+//     color: $text-color;
+
+//     @include respond-to(mobile) {
+//       font-size: 28px;
+//     }
+//   }
+
+//   &__slider {
+//     position: relative;
+//     margin: 0 48px;
+//   }
+
+//   &__track-container {
+//     overflow: hidden;
+//   }
+
+//   &__track {
+//     display: flex;
+//     transition: transform 0.5s ease-in-out;
+
+//     &.sliding-right {
+//       animation: slideRight 0.5s ease-in-out;
+//     }
+
+//     &.sliding-left {
+//       animation: slideLeft 0.5s ease-in-out;
+//     }
+//   }
+
+//   &__slide {
+//     flex: 0 0 100%;
+//     opacity: 0;
+//     transition: opacity 0.3s ease;
+//     padding: 0 20px;
+
+//     &.active {
+//       opacity: 1;
+//     }
+//   }
+
+//   &__quote {
+//     text-align: center;
+//     margin-bottom: 32px;
+
+//     &-main {
+//       font-size: 24px;
+//       font-weight: 500;
+//       margin-bottom: 24px;
+//       color: $text-color;
+//       line-height: 1.4;
+
+//       @include respond-to(mobile) {
+//         font-size: 20px;
+//       }
+//     }
+
+//     &-sub {
+//       font-size: 18px;
+//       color: $secondary-color;
+//       line-height: 1.6;
+//       margin: 0 auto;
+//       max-width: 800px;
+
+//       @include respond-to(mobile) {
+//         font-size: 16px;
+//       }
+//     }
+//   }
+
+//   &__author {
+//     text-align: center;
+
+//     &-name {
+//       font-size: 18px;
+//       font-weight: 600;
+//       margin-bottom: 4px;
+//       color: $text-color;
+//     }
+
+//     &-role {
+//       font-size: 16px;
+//       color: $secondary-color;
+//     }
+//   }
+
+//   &__arrow {
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 50%;
+//     background: white;
+//     border: 1px solid $border-color;
+//     color: $text-color;
+//     font-size: 20px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     cursor: pointer;
+//     transition: all 0.3s ease;
+//     z-index: 2;
+
+//     &:hover {
+//       background-color: $primary-color;
+//       border-color: $primary-color;
+//       color: white;
+//     }
+
+//     &--prev {
+//       left: -48px;
+//     }
+
+//     &--next {
+//       right: -48px;
+//     }
+//   }
+
+//   &__dots {
+//     display: flex;
+//     justify-content: center;
+//     gap: 8px;
+//     margin-top: 32px;
+//   }
+
+//   &__dot {
+//     width: 8px;
+//     height: 8px;
+//     border-radius: 50%;
+//     background: $border-color;
+//     border: none;
+//     padding: 0;
+//     cursor: pointer;
+//     transition: all 0.3s ease;
+
+//     &.active {
+//       background: $primary-color;
+//       transform: scale(1.2);
+//     }
+
+//     &:hover {
+//       background-color: darken($primary-color, 10%);
+
+
+//     }
+//   }
+// }
+
+// @keyframes slideRight {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(-100%);
+//   }
+// }
+
+// @keyframes slideLeft {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(100%);
+//   }
+// }
 .driving-results {
   padding: 80px 0;
   background-color: $background-color;
@@ -1734,6 +1915,7 @@
     @include container;
     max-width: 1000px;
     position: relative;
+    padding: 0 16px; // Add padding for better spacing on smaller screens
   }
 
   h2 {
@@ -1745,16 +1927,19 @@
 
     @include respond-to(mobile) {
       font-size: 28px;
+      margin-bottom: 32px; // Reduce space for smaller screens
     }
   }
 
   &__slider {
     position: relative;
-    margin: 0 48px;
+    margin: 0 auto; // Center the slider for all screens
+    max-width: 100%; // Ensure it scales properly
   }
 
   &__track-container {
     overflow: hidden;
+    padding: 0 16px; // Add padding to avoid content touching edges on smaller screens
   }
 
   &__track {
@@ -1779,6 +1964,10 @@
     &.active {
       opacity: 1;
     }
+
+    @include respond-to(mobile) {
+      padding: 0 12px; // Reduce padding for smaller screens
+    }
   }
 
   &__quote {
@@ -1794,6 +1983,7 @@
 
       @include respond-to(mobile) {
         font-size: 20px;
+        margin-bottom: 16px; // Reduce spacing
       }
     }
 
@@ -1806,6 +1996,7 @@
 
       @include respond-to(mobile) {
         font-size: 16px;
+        max-width: 100%; // Allow full width on smaller devices
       }
     }
   }
@@ -1818,11 +2009,19 @@
       font-weight: 600;
       margin-bottom: 4px;
       color: $text-color;
+
+      @include respond-to(mobile) {
+        font-size: 16px; // Adjust size for smaller screens
+      }
     }
 
     &-role {
       font-size: 16px;
       color: $secondary-color;
+
+      @include respond-to(mobile) {
+        font-size: 14px; // Adjust size for smaller screens
+      }
     }
   }
 
@@ -1830,13 +2029,13 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    width: 36px; // Smaller size for arrows
+    height: 36px;
     border-radius: 50%;
     background: white;
     border: 1px solid $border-color;
     color: $text-color;
-    font-size: 20px;
+    font-size: 16px; // Adjust font size for icon
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1851,11 +2050,19 @@
     }
 
     &--prev {
-      left: -48px;
+      left: -32px;
+
+      @include respond-to(mobile) {
+        left: -16px; // Adjust position for smaller screens
+      }
     }
 
     &--next {
-      right: -48px;
+      right: -32px;
+
+      @include respond-to(mobile) {
+        right: -16px; // Adjust position for smaller screens
+      }
     }
   }
 
@@ -1864,6 +2071,11 @@
     justify-content: center;
     gap: 8px;
     margin-top: 32px;
+
+    @include respond-to(mobile) {
+      gap: 6px; // Reduce gap for smaller screens
+      margin-top: 24px;
+    }
   }
 
   &__dot {
@@ -1883,22 +2095,12 @@
 
     &:hover {
       background-color: darken($primary-color, 10%);
-
-
     }
   }
 }
 
+// Keyframes for sliding
 @keyframes slideRight {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes slideLeft {
   from {
     transform: translateX(0);
   }
@@ -1906,6 +2108,7 @@
     transform: translateX(100%);
   }
 }
+
 
 
 
