@@ -350,7 +350,15 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Add the "Connect Sales" button */}
-        <button className="navbar__connect-sales"> Connect Sales →</button>
+        <button className="navbar__connect-sales"   style={{ 
+    backgroundColor: "blue", 
+    color: "white",  // Make the text white so it stands out on the blue background
+    border: "none", 
+    padding: "10px 20px", 
+    fontSize: "16px", 
+    borderRadius: "4px",  // Optional: adds rounded corners to the button
+    cursor: "pointer" 
+  }}> Connect Sales →</button>
       </div>
     </nav>
   );
