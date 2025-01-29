@@ -28,8 +28,8 @@ const Partners = () => {
       <Certifications/>
       
      
-      <BlogPosts />
       <DrivingResults/>
+      <BlogPosts />
       <CallToAction />
       <Footer />
     </div>
