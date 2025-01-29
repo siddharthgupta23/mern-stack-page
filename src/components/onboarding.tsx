@@ -162,6 +162,15 @@ function StepCard({ icon, step, title, description }: StepCardProps) {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    position: "relative",
+  }
+
+  const arrowStyle: React.CSSProperties = {
+    position: "absolute",
+    top: "20px",
+    right: "20px",
+    fontSize: "20px",
+    color: "#666",
   }
 
   const iconStyle: React.CSSProperties = {
@@ -171,28 +180,35 @@ function StepCard({ icon, step, title, description }: StepCardProps) {
     color: "#2048ff",
   }
 
-  const stepStyle: React.CSSProperties = {
-    color: "#666",
-    marginBottom: "8px",
+  const stepBadgeStyle: React.CSSProperties = {
+    backgroundColor: "#f5f5f5",
+    padding: "4px 12px",
+    borderRadius: "16px",
     fontSize: "14px",
+    color: "#666",
+    marginBottom: "12px",
   }
 
   const titleStyle: React.CSSProperties = {
     fontSize: "20px",
     fontWeight: "600",
     marginBottom: "12px",
+    color: "#000",
   }
 
   const descriptionStyle: React.CSSProperties = {
     color: "#666",
-    fontSize: "16px",
+    fontSize: "14px",
     lineHeight: "1.6",
+    maxWidth: "280px",
+    margin: "0 auto",
   }
 
   return (
     <div style={cardStyle}>
+      <span style={arrowStyle}>»</span>
       <div style={iconStyle}>{icon}</div>
-      <div style={stepStyle}>{step}</div>
+      <div style={stepBadgeStyle}>{step}</div>
       <h3 style={titleStyle}>{title}</h3>
       <p style={descriptionStyle}>{description}</p>
     </div>
@@ -211,10 +227,11 @@ export default function OnboardingSteps() {
   }
 
   const titleStyle: React.CSSProperties = {
-    fontSize: "clamp(28px, 4vw, 32px)",
+    fontSize: "32px",
     textAlign: "center",
     marginBottom: "40px",
-    fontWeight: "bold",
+    fontWeight: "600",
+    color: "#000",
   }
 
   const gridContainerStyle: React.CSSProperties = {
@@ -233,7 +250,6 @@ export default function OnboardingSteps() {
     margin: "0 auto",
   }
 
-  // Media query is handled with a useEffect and window.matchMedia
   React.useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 768px)")
 
@@ -242,7 +258,6 @@ export default function OnboardingSteps() {
       const rows = document.querySelectorAll(".grid-row")
 
       if (e.matches) {
-        // Desktop view
         if (container) {
           container.style.gridTemplateColumns = "repeat(2, 1fr)"
         }
@@ -250,7 +265,6 @@ export default function OnboardingSteps() {
           ;(row as HTMLElement).style.gridTemplateColumns = "repeat(1, 1fr)"
         })
       } else {
-        // Mobile view
         if (container) {
           container.style.gridTemplateColumns = "1fr"
         }
@@ -260,13 +274,9 @@ export default function OnboardingSteps() {
       }
     }
 
-    // Initial check
     handleResize(mediaQuery)
-
-    // Add listener for changes
     mediaQuery.addListener(handleResize)
 
-    // Cleanup
     return () => mediaQuery.removeListener(handleResize)
   }, [])
 
@@ -290,7 +300,7 @@ export default function OnboardingSteps() {
       description: "Upload your portfolio and past work examples to attract clients to your profile.",
     },
     {
-      icon: <img src="icons8-verify-48 1.png"/>,
+      icon:<img src="icons8-verify-48 1.png"/>,
       step: "Step 4",
       title: "Start Working",
       description: "Get verified by our team and easily manage your work through our Partner Dashboard.",
