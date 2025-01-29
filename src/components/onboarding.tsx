@@ -142,7 +142,7 @@
 //   )
 // }
 import React from "react"
-import { Pencil, User, Folder, Check } from "lucide-react"
+
 
 interface StepCardProps {
   icon: React.ReactNode
