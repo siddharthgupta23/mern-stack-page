@@ -32,13 +32,7 @@ export default function Partnerss() {
     lineHeight: "1.2",
     
   }
-  const titledfd: React.CSSProperties = {
-    fontSize: "72px",
-    fontWeight: "Inter",
-    marginBottom: "20px",
-    lineHeight: "1.2",
-    
-  }
+
 
   const highlightStyle: React.CSSProperties = {
     backgroundColor: "#C4F032",
