@@ -1,7 +1,5 @@
 
-
 import GlobalPresence from "../components/GlobalPresence"
-
 import BlogPosts from "../components/BlogPosts"
 import CallToAction from "../components/CallToAction"
 import Footer from "../components/Footer"
