@@ -8,30 +8,42 @@ interface FeatureCardProps {
 
 function FeatureCard({ number, title, description }: FeatureCardProps) {
   const cardStyle: React.CSSProperties = {
+    border: "1px solid #2048ff",
+    borderRadius: "8px",
     padding: "24px",
-    border: "1px solid #e1e1e1",
-    borderRadius: "12px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "16px",
     backgroundColor: "white",
-    height: "100%",
+    minHeight: "300px",
+    width: "100%",
   }
 
   const numberStyle: React.CSSProperties = {
+    backgroundColor: "#e8f0ff",
     color: "#2048ff",
-    fontSize: "24px",
-    fontWeight: "bold",
-    marginBottom: "16px",
+    width: "32px",
+    height: "32px",
+    borderRadius: "4px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "16px",
+    fontWeight: "500",
   }
 
   const titleStyle: React.CSSProperties = {
-    fontSize: "20px",
+    fontSize: "24px",
     fontWeight: "600",
-    marginBottom: "12px",
+    color: "#000",
+    marginTop: "8px"
   }
 
   const descriptionStyle: React.CSSProperties = {
-    color: "#666",
-    lineHeight: "1.6",
     fontSize: "16px",
+    lineHeight: "1.6",
+    color: "#666",
+    flex: 1,
   }
 
   return (
@@ -48,6 +60,8 @@ export default function Partners_pageee() {
     padding: "60px 20px",
     maxWidth: "1200px",
     margin: "0 auto",
+    backgroundColor:"#F5F5F7",
+    
   }
 
   const headerStyle: React.CSSProperties = {

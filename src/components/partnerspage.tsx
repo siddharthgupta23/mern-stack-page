@@ -26,14 +26,22 @@ export default function Partnerss() {
   }
 
   const titleStyle: React.CSSProperties = {
-    fontSize: "clamp(32px, 5vw, 48px)",
-    fontWeight: "bold",
+    fontSize: "72px",
+    fontWeight: "Inter",
     marginBottom: "20px",
     lineHeight: "1.2",
+    
+  }
+  const titledfd: React.CSSProperties = {
+    fontSize: "72px",
+    fontWeight: "Inter",
+    marginBottom: "20px",
+    lineHeight: "1.2",
+    
   }
 
   const highlightStyle: React.CSSProperties = {
-    backgroundColor: "#9fff9c",
+    backgroundColor: "#C4F032",
     padding: "0 8px",
     borderRadius: "4px",
   }
@@ -139,6 +147,7 @@ export default function Partnerss() {
             Join Us <span>→</span>
           </button>
         </div>
+       
       </div>
     </div>
   )
