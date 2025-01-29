@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-
+import Partners from "./pages/Partners";
 import "./App.scss"
 import Hero from "./components/Hero";
+
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hero" element={<Hero/>}/>
+          <Route path="/partners" element={<Partners/>}/>
   
         </Routes>
       </div>
