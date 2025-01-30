@@ -315,8 +315,21 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar">
-      <div className="navbar__container">
+    <nav className="navbar" style={{
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 1000,
+    }}>
+      <div className="navbar__container" style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "1rem",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}>
         <Link to="/" className="navbar__logo">
           <img src="Hubnex Labs left align.png"/>
         </Link>
