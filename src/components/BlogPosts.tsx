@@ -365,9 +365,12 @@ const BlogPosts: React.FC = () => {
       style={{ padding: "2rem 1rem", marginBottom: "2rem" }} // Adjust padding/margin here if needed
     >
       <div className="blog-posts__container" style={{ textAlign: "center", marginBottom: "1rem" }}>
-        <h2 style={{ marginBottom: "0.5rem" }}>Blog posts for the community</h2>
+        <h2 style={{ marginBottom: "0.5rem" }}>Insights Worth Sharing: Our Latest Blog Posts
+</h2>
         <p style={{ marginBottom: "1rem", color: "#6B7280" }}>
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        As an industry leader in technology, we provide valuable insights and the latest trends shaping our field. 
+        Stay informed with us as we keep you updated on evolving technologies and thought-provoking articles that inspire innovation and drive success!
+
         </p>
 
         <div className="blog-posts__slider" style={{ marginTop: "1rem" }}>

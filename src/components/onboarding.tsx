@@ -168,7 +168,7 @@ function StepCard({ icon, step, title, description }: StepCardProps) {
   const arrowStyle: React.CSSProperties = {
     position: "absolute",
     top: "20px",
-    right: "20px",
+    left: "210px",
     fontSize: "20px",
     color: "#666",
   }
@@ -315,12 +315,17 @@ export default function OnboardingSteps() {
           {/* First Row */}
           <div className="grid-row" style={gridRowStyle}>
             <StepCard {...steps[0]} />
+            <div>
             <StepCard {...steps[1]} />
+            </div>
           </div>
           {/* Second Row */}
           <div className="grid-row" style={gridRowStyle}>
             <StepCard {...steps[2]} />
+            <div>
+
             <StepCard {...steps[3]} />
+            </div>
           </div>
         </div>
       </div>

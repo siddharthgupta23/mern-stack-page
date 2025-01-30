@@ -318,14 +318,14 @@ const Hero = () => {
         </div>
 
         <h1 style={styles.heading}>
-          High-performing remote teams.
+        Transforming Businesses with Smarter, Customized IT Solutions to Empower Innovation, Boost Efficiency, and Drive Growth.
           <br />
           The future of work.
         </h1>
 
         <p style={styles.subheading}>
-          Powerful, self-serve team engagement tools and analytics. Supercharge
-          your managers & keep employees engaged from anywhere.
+        We continuously strive to exceed our clients' expectations by delivering personalized solutions,
+unwavering dedication, and unparalleled cutting-edge technology.
           <div style={styles.imageContainer}>
             <img
               src="Circle 8.png"
@@ -342,7 +342,7 @@ const Hero = () => {
             size="large"
             style={styles.button}
           >
-            Contact Us
+            know Our Services →
           </Button>
           <Button
             variant="outlined"
@@ -350,7 +350,7 @@ const Hero = () => {
             size="large"
             style={{ ...styles.button, ...styles.joinUs }}
           >
-            Join Us →
+            Get Free Consultation →
           </Button>
         </div>
 

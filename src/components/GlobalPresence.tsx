@@ -54,11 +54,9 @@ const GlobalPresence = () => {
       <div className="container">
         <div className="grid">
           <div className="left-section">
-            <h2>Unleash the full power of data</h2>
+            <h2>Recognized by a multitude of companies internationally.</h2>
             <p>
-              We guide global businesses through the challenges of developing
-              purposeful technology that addresses their needs and advances their
-              growth. We have established offices in India, the UAE, and the USA.
+            At Hubnex Labs, we pride ourselves on being a trusted partner for global enterprises across various industries. Our innovative technology solutions empower businesses to thrive in an increasingly competitive landscape. With established offices in India, the UAE, and the USA, we are committed to delivering tailored services that drive growth and operational excellence. Join the ranks of satisfied clients who rely on us for their IT consulting needs and experience the Hubnex difference.
             </p>
             <div className="stats">
               <div>
