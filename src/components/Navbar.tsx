@@ -321,14 +321,17 @@ const Navbar: React.FC = () => {
       left: 0,
       right: 0,
       zIndex: 1000,
+    
     }}>
       <div className="navbar__container" style={{
-          maxWidth: "1200px",
+          maxWidth: "1500px",
           margin: "0 auto",
           padding: "1rem",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+         
+         
         }}>
         <Link to="/" className="navbar__logo">
           <img src="Hubnex Labs left align.png"/>
